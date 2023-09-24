@@ -17,7 +17,7 @@ void main() async {
   }
   if (await Shared.getInitState() == null) {
     Shared.setInitState(
-        '{ "transactionsItem": [ {"type": "Перевод","number": 1, "amount": 500,"commission": 0, "total": 0, "date": "24.09.2023"},{"type": "Пополнение","number": 2, "amount": 1000,"commission": 0, "total": 0, "date": "20.09.2023"}, {"type": "Снятие","number": 3, "amount": 1000,"commission": 0, "total": 0, "date": "19.09.2023"}]}');
+        '{ "transactionsItem": [ {"type": "Перевод","number": 1, "amount": 500,"commission": 0, "total": 0, "date": "24.09.2023"},{"type": "Пополнение","number": 2, "amount": 1000,"commission": 0, "total": 0, "date": "20.09.2023"}, {"type": "Снятие","number": 3, "amount": 1000,"commission": 0, "total": 0, "date": "19.09.2023"},{"type": "Перевод","number": 4, "amount": 5000,"commission": 0, "total": 5000, "date": "24.08.2023"}]}');
   }
 
   final Store<AppState> store = Store(
@@ -40,7 +40,6 @@ void main() async {
       ),
     },
     initialRoute: '/auth',
-    // home: AuthWidget(),
     theme: ThemeData(fontFamily: 'Jost'),
   ));
 }

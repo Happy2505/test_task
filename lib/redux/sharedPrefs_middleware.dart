@@ -2,30 +2,23 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:redux/redux.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../base/shared.dart';
 import 'app_state.dart';
 import 'action.dart';
 
-
 class SharedPrefsMiddleware extends MiddlewareClass<AppState> {
-
   SharedPrefsMiddleware();
 
   @override
   Future<void> call(Store<AppState> store, action, NextDispatcher next) async {
-    if (
-    // action is AddItemAction ||
-    //     action is ToggleItemStateAction ||
-        action is RemoveItemAction) {
+    if (action is RemoveItemAction) {
       await _saveStateToPrefs(store.state);
     }
 
     if (action is FetchItemsAction) {
       await _loadStateFromPrefs(store);
     }
-
     next(action);
   }
 

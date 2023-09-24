@@ -31,9 +31,9 @@ class DescTransactionWidget extends StatelessWidget {
                 callback(transactions);
                 Navigator.pop(context);
               },
-              child: Text(
-                "Удалить транзакцию",
-                style: const TextStyle(fontSize: 16),
+              child: const Text(
+                "Отменить транзакцию",
+                style: TextStyle(fontSize: 16),
               ),
             ),
           ),
@@ -54,7 +54,7 @@ class DescTransactionWidget extends StatelessWidget {
                 "Дата транзакции: ${transactions.date}",
                 style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
-              Divider(
+              const Divider(
                 height: 2,
                 thickness: 2,
                 color: Colors.white,
@@ -63,7 +63,7 @@ class DescTransactionWidget extends StatelessWidget {
                 "Сумма транзакции: ${transactions.amount} руб.",
                 style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
-              Divider(
+              const Divider(
                 height: 2,
                 thickness: 2,
                 color: Colors.white,
@@ -72,7 +72,7 @@ class DescTransactionWidget extends StatelessWidget {
                 "Комиссия транзакции: ${transactions.commission} руб.",
                 style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
-              Divider(
+              const Divider(
                 height: 2,
                 thickness: 2,
                 color: Colors.white,
@@ -81,7 +81,7 @@ class DescTransactionWidget extends StatelessWidget {
                 "Итог: ${transactions.total} руб.",
                 style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
-              Divider(
+              const Divider(
                 height: 2,
                 thickness: 2,
                 color: Colors.white,
@@ -90,7 +90,7 @@ class DescTransactionWidget extends StatelessWidget {
                 "Номер транзакции: ${transactions.number}",
                 style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
-              Divider(
+              const Divider(
                 height: 2,
                 thickness: 2,
                 color: Colors.white,
@@ -99,7 +99,7 @@ class DescTransactionWidget extends StatelessWidget {
                 "Тип транзакции: ${transactions.type}",
                 style: const TextStyle(fontSize: 20, color: Colors.white),
               ),
-              Divider(
+              const Divider(
                 height: 2,
                 thickness: 2,
                 color: Colors.white,
